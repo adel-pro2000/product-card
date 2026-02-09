@@ -22,7 +22,7 @@ body {
   justify-content: center;
   margin: 0;
   padding: 220px 0 102px;
-  background-image: url('../images/background.png');
+  background-image: url('../images/bg_dandelions.png');
   background-size: 790px 697px;
   background-repeat: no-repeat;
   font-weight: 400;
@@ -85,7 +85,7 @@ body {
   align-self: flex-start;
 }
 
-.product-card__title-second {
+.product-card_description {
   font-size: 13px;
   font-weight: 400;
   margin: 0;
