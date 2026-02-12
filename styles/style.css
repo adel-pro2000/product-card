@@ -29,6 +29,37 @@ body {
   font-size: 70px;
   }
 
+.buttons {
+  position: absolute;
+  top: 0;
+  left: 30%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+.btn {
+  background-color: #F7F7FA;
+  border: 1px solid #A5A3B9;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #515076;  
+}
+
+.btn-second {
+  background-color: rgba(136, 255, 0, 0.5);
+  border: 1px solid #A5A3B9;
+  border-radius: 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
 .product-card-wrapper__line {
   display: flex;
   justify-content: space-between;
