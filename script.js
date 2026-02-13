@@ -45,8 +45,8 @@ mainTitleContent.addEventListener('mouseenter', () => {
 
 // Кнопка меняющая свой цвет при каждом клике
 
-const btnColorChanging = document.getElementById('btn-color-changing');
+const changeColorBtn = document.getElementById('btn-color-changing');
 
-btnColorChanging.addEventListener('click', () => {
-  btnColorChanging.classList.toggle('btn-second');
+changeColorBtn.addEventListener('click', () => {
+  changeColorBtn.classList.toggle('btn-second');
 });
