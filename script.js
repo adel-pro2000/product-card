@@ -1,34 +1,34 @@
 // Изменение цвета первой карточки товара
 
-const changeColorFirstCardBtn = document.getElementById('change-color-first-card-btn');
+const changeColorFirstCardBtn = document.getElementById('btn-change-color-first-card');
 const firstProductCard = document.querySelector('.product-card');
-const oranjColor = 'rgba(255, 165, 0, 0.3)'; // Новый цвет для первой карточки
+const orangeColor = 'rgba(255, 165, 0, 0.3)'; // Новый цвет для первой карточки
 
 changeColorFirstCardBtn.addEventListener('click', () => {
-  firstProductCard.style.backgroundColor = oranjColor;
+  firstProductCard.style.backgroundColor = orangeColor;
 });
 
 // Изменение цвета всех карточек товара
 
-const changeColorAllCardsBtn = document.getElementById('change-color-all-cards-btn');
+const changeColorAllCardsBtn = document.getElementById('btn-change-color-all-cards');
 const productCards = document.querySelectorAll('.product-card');
-const radColor = 'rgba(255, 0, 0, 0.5)'; // Новый цвет для всех карточек
+const redColor = 'rgba(255, 0, 0, 0.5)'; // Новый цвет для всех карточек
 
 changeColorAllCardsBtn.addEventListener('click', () => {
   productCards.forEach(
-    card => card.style.backgroundColor = radColor
+    card => card.style.backgroundColor = redColor
   )
 });
 
 // Переход на главную страницу Google
 
-const openGoogleBtn = document.getElementById('open-google-btn');
+const openGoogleBtn = document.getElementById('btn-open-google');
 openGoogleBtn.addEventListener('click', openGoogle);
 
 function openGoogle() {
   const answer = confirm('Вы уверены, что хотите перейти на главную страницу Google?');
   
-  if (answer===true) {
+  if (answer === true) {
     window.open('https://www.google.com', '_blank');
   } else {
     console.log('Переход на Google отменён пользователем.');
@@ -45,8 +45,8 @@ mainTitleContent.addEventListener('mouseenter', () => {
 
 // Кнопка меняющая свой цвет при каждом клике
 
-const clickMeBtn = document.getElementById('click-me-btn');
+const btnColorChanging = document.getElementById('btn-color-changing');
 
-clickMeBtn.addEventListener('click', () => {
-  clickMeBtn.classList.toggle('btn-second');
+btnColorChanging.addEventListener('click', () => {
+  btnColorChanging.classList.toggle('btn-second');
 });
