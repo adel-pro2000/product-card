@@ -12,7 +12,7 @@ showCityTemperature ('Москва', 26);
 
 // Задние №2.1: Создние переменной, которая хранит внутри себя скорость света.
 
-const SPEED_OF_LIGHT = 299792458
+const SPEED_OF_LIGHT = 299792458;
 
 console.log(`Скорость света в вакууме ${SPEED_OF_LIGHT}м/с`);
 
@@ -35,9 +35,9 @@ checkSpeed(1000000000000000);
 let productPrice = 20;
 let productName = 'Хлеб';
 
-// Задание №3.2: Создние фунции для определения финансовой возможности приобретения продута.
+// Задание №3.2: Создние функции для покупки продута.
 
-function canBuyProduct(balance) {
+function buyProduct(balance) {
   if (balance >= productPrice) {
     console.log(`${productName} приобретён. Спасибо за покупку!`);
   } else {
@@ -45,9 +45,9 @@ function canBuyProduct(balance) {
   }
 }
 
-canBuyProduct(100)
-canBuyProduct(20)
-canBuyProduct(10)
+buyProduct(100)
+buyProduct(20)
+buyProduct(10)
 
 // Задание №4: Создние фунции для расчета скорости свободного падения тела высоты.
 
@@ -72,4 +72,3 @@ let goodMorning = `Доброе утро, ${studentAge.name}!`;
 console.log(studentAge);
 console.log(G);
 console.log(goodMorning);
-
