@@ -45,9 +45,9 @@ function buyProduct(balance) {
   }
 }
 
-buyProduct(100)
-buyProduct(20)
-buyProduct(10)
+buyProduct(100);
+buyProduct(20);
+buyProduct(10);
 
 // Задание №4: Создние фунции для расчета скорости свободного падения тела высоты.
 
@@ -65,7 +65,7 @@ let studentAge = {
   age: 17
 };
 
-const G = 0.0000000000667; /// Гравитационная постоянная, постоянная Ньютона
+const G = 0.0000000000667; // Гравитационная постоянная, постоянная Ньютона
 
 let goodMorning = `Доброе утро, ${studentAge.name}!`;
 
