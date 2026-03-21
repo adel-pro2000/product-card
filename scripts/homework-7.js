@@ -1,11 +1,15 @@
+// Задание № 6: Импортируем константу созданную в файле comments.js.
+
+import { socialMediaComments } from "./comments.js";
+
+console.log(socialMediaComments);
+
 // Задание №2 Создание чилового массива от 1 до 10 и фильтрация его таким образом, 
 // что бы мы получил массив чисел, начиная с 5
 
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
-const numbersStartingWithFive = numbers.reduce((acc, num) => {
-return num > 5 ? [...acc, num] : acc;
-}, [])
+const numbersStartingWithFive = numbers.filter(number => number >= 5);
 
 console.log(numbersStartingWithFive);
 
@@ -30,45 +34,33 @@ const arrayReverse = (array) => array.reverse();
 console.log(arrayReverse(numbers));
 console.log(arrayReverse(kitchenAppliances));
 
-// Задание № 6: Импортируем константу созданную в файле comments.js.
-
-import { socialMediaComments } from "./comments.js";
-
-console.log(socialMediaComments);
-
 // Задание №7: Вывод в консоль массив тех комментариев, почта пользователей которых содержит ".com"
 
-const filteredСomments = socialMediaComments.filter(comment=> comment.email.includes('.com'));
+const filteredComments = socialMediaComments.filter(comment => comment.email.includes('.com'));
 
-console.log(filteredСomments);
+console.log(filteredComments);
 
 // Задание №8: Переборка массива таким образом, что бы пользователи с id меньше или равно 5 имели postId: 2, 
 // а те, у кого id больше 5, имели postId: 1
 
-const updatedComments = socialMediaComments.map(comment=>comment.id <= 5 ? {...comment, postId: 2} : {...comment, postId: 1});
+const updatedComments = socialMediaComments.map(comment => 
+comment.postId = comment.id <= 5 ? {...comment, postId: 2} : {...comment, postId: 1});
 
 console.log(updatedComments);
 
 // Задание №9: Переборка массива, что бы объекты состояли только из айди и имени
 
-const abbreviationOfCommentParameters = socialMediaComments.map(comment => (
-  {
-  id: comment.id,
-  name: comment.name,
-  }
-));
+const abbreviationOfCommentParameters = socialMediaComments.map(comment => ({id: comment.id, name: comment.name,}));
 
 console.log(abbreviationOfCommentParameters);
 
 // Задание №10: Переборка массива, добавление объектам свойства isInvalid и проверка того,
 //  что если длина тела сообщения (body) больше 180 символов - устанавливаем true, меньше - false.
 
-const newCommentParameter = socialMediaComments.map(comment => (
-  {
+const newCommentParameter = socialMediaComments.map(comment => ({
   ...comment,
-  isInvalid: comment.body.length > 180 ? true : false,
-  }
-));
+  isInvalid: comment.body.length > 180
+  }));
 
 console.log(newCommentParameter);
 
