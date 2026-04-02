@@ -13,7 +13,6 @@ export const productCards = [
     ],
     price: 2750,
     image: "moisturizing_mousse",
-    alt: "Увлажняющий мусс"
   },
   {
     name: "Увлажняющая маска",
@@ -26,7 +25,6 @@ export const productCards = [
     ],
     price: 3500,
     image: "moisturizing_mask",
-    alt: "Увлажняющая маска"
   },
   {
     name: "Гель для умывания",
@@ -39,7 +37,6 @@ export const productCards = [
     ],
     price: 1650,
     image: "cleansing_gel",
-    alt: "Гель для умывания"
   },
   {
     name: "Подарочный набор №1",
@@ -52,7 +49,6 @@ export const productCards = [
     ],
     price: 4750,
     image: "gift_set_small",
-    alt: "Подарочный набор №1"
   },
   {
     name: "Подарочный набор №5",
@@ -65,6 +61,5 @@ export const productCards = [
     ],
     price: 7520,
     image: "gift_set_big",
-    alt: "Подарочный набор №5"
   }
 ]
