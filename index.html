@@ -17,6 +17,7 @@
       <button id="btn-change-color-all-cards" class="btn">Изменить цвет всех карточек</button>
       <button id="btn-open-google" class="btn">Открыть Google</button>
       <button id="btn-color-changing" class="btn">Нажми меня</button>
+      <button id="open-modal-btn" class="btn">Регистрация</button>
     </div>
     <div class="product-card-wrapper__line"></div>
   </div>
@@ -37,10 +38,74 @@
       </div>
     </div>
   </template>
+  <footer class="footer">
+    <h4 class="footer__title">Product Cards</h4>
+    <p class="footer__description">У Нас Самые Лучшие Продукты Для Кожи!</p>
+    <ul class="footer__social-networks">
+      <li class="footer__social-networks__telegram"><a class="footer__social-link" href="#" target="_blank">
+        <img class="footer__social-icon" src="./images/telegram_icon.svg" alt="Telegram">
+      </a></li>
+      <li class="footer__social-networks__vk"><a class="footer__social-link" href="#" target="_blank">
+        <img class="footer__social-icon" src="./images/vk_icon.svg" alt="VK">
+      </a></li>
+    </ul>
+    <form class="footer__form" id="email-form">
+      <label class="footer__form_description">Подпишись на наши акции:</label>
+      <div class="footer__form_field">
+        <input class="footer__form_input" name="email" type="email" placeholder="Введи Email..." required autocomplete="email">
+        <button type="submit">Подписаться</button>
+      </div>
+    </form>
+    <img class="footer__line" src="./images/footer_line.svg" alt="VK">
+    <p class="footer__adress">www.product-cards.com©all right reserve</p>
+    <nav class="footer__menu">
+      <ul class="footer__menu-list">
+        <li class="footer__menu-list_title">Быстрые ссылки</li>
+        <li class="footer__menu-list_item"><a href="#">Главная</a></li>
+        <li class="footer__menu-list_item"><a href="#">Магазин</a></li>
+        <li class="footer__menu-list_item"><a href="#">Контакты</a></li>
+      </ul>
+    </nav>
+  </footer>
+  <div class="modal" id="modal-window">
+    <div class="modal-content">
+      <button class="close-modal" id="close-modal-btn">&times;</button>
+      <form class="modal-form" id="registerForm">
+        <ul class="modal-list">
+        <li class="modal-list__item">
+          <label for="name">Имя:</label>
+          <input type="text" name="name" id="name" required placeholder="Лев">
+        </li>
+        <li class="modal-list__item">
+          <label for="surname">Фамилия:</label>
+          <input type="text" name="surname" id="surname" required placeholder="Каменев">
+        </li>
+        <li class="modal-list__item">
+          <label for="date-of-birth">Дата рождения:</label>
+          <input type="date" name="date-of-birth" id="date-of-birth" required value="2000-01-01">
+        </li>
+        <li class="modal-list__item">
+          <label for="login">Логин:</label>
+          <input type="text" name="login" id="login" required placeholder="******">
+        </li>
+        <li class="modal-list__item">
+          <label for="password">Пароль:</label>
+          <input type="password" name="password" id="password" required placeholder="********" minlength="6">
+        </li>
+        <li class="modal-list__item">
+          <label for="confirm-password">Повторение пароля:</label>
+          <input type="password" name="confirm-password" id="confirm-password" required placeholder="********">
+        </li>
+        </ul>
+        <button class="get-btn" type="submit">Отправить</button>
+      </form>
+      </div>
+  </div>
   <script src="./scripts/script.js"></script>
   <script src="./scripts/homework-5.js"></script>
   <script src="./scripts/homework-6.js"></script>
   <script src="./scripts/homework-7.js" type="module"></script>
   <script src="./scripts/homework-8.js" type="module"></script>
+  <script src="./scripts/homework-9.js" type="module"></script>
 </body>
 </html>
