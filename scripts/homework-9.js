@@ -3,6 +3,9 @@
 // форма не отправляется. Кнопка "Подписаться" и есть "отправкой формы", при нажатии на
 // которую мы будем выводить консоль лог в виде объекта:  { email: 'введенная почта' }
 
+import { Modal } from "./modal.js";
+import { Form } from "./form.js";
+
 const emailForm = document.getElementById('email-form');
 
 emailForm.addEventListener('submit', function(event) {
@@ -19,20 +22,11 @@ emailForm.addEventListener('submit', function(event) {
 // Не забываем добавить кнопку для закрытия модалки (крестик в углу).
 
 const registrationBtn = document.getElementById('open-modal-btn');
-const registrationModal = document.getElementById('modal-window');
-const closeBtn = document.getElementById('close-modal-btn');
+const modal = new Modal('modal-window');
 
-function openModal() {
-  registrationModal.classList.add('modal-showed');
-}
-
-registrationBtn.addEventListener('click', openModal);
-
-function closeModal() {
-  registrationModal.classList.remove('modal-showed');
-}
-
-closeBtn.addEventListener('click', closeModal);
+registrationBtn.addEventListener('click', () => {
+  modal.open();
+});
 
 // Задание №6: Добавить в модальное окно форму с полями: имя, фамилия, email. И прописать логику, 
 // которая при отправке формы будет выводить в консоль объект с данными, которые были введены в 
@@ -40,35 +34,30 @@ closeBtn.addEventListener('click', closeModal);
 
 let user = null;
 
-const userForm = document.getElementById('registerForm');
+const userForm = new Form('registerForm');
 
-userForm.addEventListener('submit', (event) => {
+userForm.form.addEventListener('submit', (event) => {
   event.preventDefault();
 
-  const password = userForm.password.value;
-  const confirmPassword = userForm['confirm-password'].value;
+  const values = userForm.getValues();
+  const password = values.password;
+  const confirmPassword = values['confirm-password'];
   const passwordsMatch = (password === confirmPassword);
-  const isFormValid = userForm.checkValidity();
+  const isFormValid = userForm.isValid();
     if (!isFormValid || !passwordsMatch) {
       alert('Не то вводишь! Давай исправляй!');
       return;
     }
+  const formData = userForm.getValues();
 
-  const formData = {
-    name: userForm.name.value,
-    surname: userForm.surname.value,
-    'date-of-birth': userForm['date-of-birth'].value,
-    login: userForm.login.value,
-    password: userForm.password.value,
-    createdOn: new Date()
-  };
+  formData.createdOn = new Date();
 
   user = formData;
 
   console.log('Твои данные:', user);
   alert('Ты зарегестрирован! Загляни в консоль (F12), там вся инфа о тебе!');
 
-  closeModal();
-
+  modal.close();
+  userForm.clear();
 });
 
