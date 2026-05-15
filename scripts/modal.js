@@ -8,7 +8,7 @@ export class Modal {
   constructor(modalID) {
     this.modal = document.getElementById(modalID);
     this.modalShowed = 'modal-showed';
-    this.closeBtn = document.getElementById('close-modal-btn');
+    this.closeBtn = this.modal.querySelector('.close-modal');
 
     this.initCloseButton();
   }

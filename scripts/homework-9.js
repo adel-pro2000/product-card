@@ -6,15 +6,13 @@
 import { Modal } from "./modal.js";
 import { Form } from "./form.js";
 
-const emailForm = document.getElementById('email-form');
+const emailForm = new Form('email-form');
 
-emailForm.addEventListener('submit', function(event) {
+emailForm.form.addEventListener('submit', (event) => {
   event.preventDefault();
-  const form = event.target;
-  const formData = new FormData(form);
-  const data = Object.fromEntries(formData.entries());
-  console.log(data);
-})
+
+  console.log(emailForm.getValues());
+});
 
 // Задание №5 второй уровень: Создать кнопку "Регистрация". Создать модальное окно,
 // используя классы "modal, modal-showed". Логика такая: при нажатии на кнопку у нас

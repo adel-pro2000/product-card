@@ -22,12 +22,3 @@ export class Form {
     this.form.reset();
   }
 }
-
-const registerForm = new Form('registerForm');
-
-registerForm.form.addEventListener('submit', (event) => {
-  event.preventDefault();
-
-  console.log(registerForm.getValues());
-});
-
