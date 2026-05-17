@@ -7,12 +7,17 @@ class Drink {
   #temperature;
 
   constructor(title, size, price, temperature) {
+
+     if (new.target === Drink) {
+      throw new Error('Нельзя создавать экземпляр абстрактного класса Drink');
+    }
+    
     this.title = title;
     this.size = size;
     this.price = price;
     this.#temperature = temperature;
   }
-
+  
   getInfo() {
     return `${this.title}, ${this.size}, ${this.price}`;
   }
