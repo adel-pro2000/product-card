@@ -1,0 +1,94 @@
+{
+  "customers": [
+    {
+      "id": "customer_1",
+      "name": "Andrey",
+      "surname": "Petrov",
+      "age": 30,
+      "phone": "+75136245198",
+      "workplace": "UrbanLab",
+      "position": "Analyst"
+    },
+    {
+      "id": "customer_2",
+      "name": "Svetlana",
+      "surname": "Ivanova",
+      "age": 28,
+      "phone": "+79136245198",
+      "workplace": "TechCorp",
+      "position": "Developer"
+    },
+    {
+      "id": "customer_3",
+      "name": "Dmitry",
+      "surname": "Sokolov",
+      "age": 35,
+      "phone": "+78136245198",
+      "workplace": "DataSolutions",
+      "position": "Data Scientist"
+    },
+    {
+      "id": "customer_4",
+      "name": "Olga",
+      "surname": "Kuznetsova",
+      "age": 32,
+      "phone": "+77136245198",
+      "workplace": "WebWorks",
+      "position": "Project Manager"
+    },
+    {
+      "id": "customer_5",
+      "name": "Alexey",
+      "surname": "Volkov",
+      "age": 29,
+      "phone": "+76136245198",
+      "workplace": "BuildCorp",
+      "position": "Manager"
+    },
+    {
+      "id": "customer_6",
+      "name": "Maria",
+      "surname": "Smirnova",
+      "age": 27,
+      "phone": "+75136245197",
+      "workplace": "DesignStudio",
+      "position": "Designer"
+    },
+    {
+      "id": "customer_7",
+      "name": "Sergey",
+      "surname": "Mikhailov",
+      "age": 31,
+      "phone": "+74136245198",
+      "workplace": "BuildCorp",
+      "position": "Technician"
+    },
+    {
+      "id": "customer_8",
+      "name": "Anna",
+      "surname": "Fedorova",
+      "age": 26,
+      "phone": "+73136245198",
+      "workplace": "UrbanLab",
+      "position": "Analyst"
+    },
+    {
+      "id": "customer_9",
+      "name": "Petr",
+      "surname": "Smirnov",
+      "age": 33,
+      "phone": "+72136245198",
+      "workplace": "SteelWorks",
+      "position": "Technician"
+    },
+    {
+      "id": "customer_10",
+      "name": "Elena",
+      "surname": "Nikolaeva",
+      "age": 29,
+      "phone": "+71136245198",
+      "workplace": "BrickHouse",
+      "position": "Manager"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Домашнее задание №13</title>
+</head>
+<body>
+  <p class="loading"></p>
+  <button id="deleteAllCards" class="btn">Удалить все карточки</button>
+  <button id="deleteCard" class="btn">Удалить карточку</button>
+  <button id="addAllCards" class="btn">Получить все карточки</button>
+  <div class="cards"></div>
+  <template id="card-template">
+    <div class="card">
+      <ul>
+        <li class="card__item card__id"></li>
+        <li class="card__item card__name"></li>
+        <li class="card__item card__surname"></li>
+        <li class="card__item card__age"></li>
+        <li class="card__item card__phone"></li>
+        <li class="card__item card__workplace"></li>
+        <li class="card__item card__position"></li>
+      </ul>
+    </div>
+  </template>
+  <script src="async.js"></script>
+</body>
+</html>
