@@ -65,7 +65,8 @@ deleteAllCardsButton.addEventListener('click', () => {
   const cardsContainer = document.querySelector('.cards');
 
   cardsContainer.innerHTML = '';
-
+  
+  localStorage.setItem('customers', JSON.stringify([]));
 });
 
 const addAllCardsButton = document.getElementById('addAllCards');
